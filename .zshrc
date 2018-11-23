@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/bsrushti/.oh-my-zsh"
@@ -9,6 +9,7 @@ export ZSH="/Users/bsrushti/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+#ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -28,10 +29,9 @@ ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
-	[[ -s /Users/bsrushti/.autojump/etc/profile.d/autojump.sh ]] && source /Users/bsrushti/.autojump/etc/profile.d/autojump.sh
+[[ -s /Users/bsrushti/.autojump/etc/profile.d/autojump.sh ]] && source /Users/bsrushti/.autojump/etc/profile.d/autojump.sh
 
 	autoload -U compinit && compinit -u
-# Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
@@ -91,6 +91,7 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -101,10 +102,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias js="/Users/bsrushti/javascript"
-alias longestline="~/Users/bsrushti/javascript/longest_line.sh"
-alias runtest="~/Users/bsrushti/javascript/run_test.sh"
-alias snapshot="~/Users/bsrushti/javascript/snapshot.sh"
+alias longestline="sh /Users/bsrushti/shFiles/longest_line.sh"
+alias runtest="/Users/bsrushti/shFiles/run_test.sh"
+alias snapshot="Users/bsrushti/shFiles/snapshot.sh"
 alias projects="/Users/bsrushti/projects/"
 alias bashdir="/Users/bsrushti/projects/bash_assignment/"
 alias awkdir="/Users/bsrushti/projects/awk/"
 alias vimdir="/Users/bsrushti/projects/vim_eg/"
+alias v=vim;
+alias csh=csh.sh
+alias func=function_names.awk
