@@ -16,7 +16,7 @@ map <S-y> "*y
 set backspace=indent,eol,start
 set laststatus=2
 set statusline+=%F
-map cf iconst func <Esc>mzi = function() {<Esc>o<Esc>o}<Esc>`zi  
+map cf iconst func <Esc>mzi = function() {<Esc>o<Esc>o};<Esc>`zi  
 map cl iconsole.log();<Esc>hi
 map pa2 iprocess.argv[2];
 map pa3 iprocess.argv[3];
@@ -24,6 +24,7 @@ map cr iconst ref = require(' <Esc>mai');<Esc>`ai
 map as iconst assert = require('assert');
 map nm inumberList = [3,7,3,1,9,5];
 map q ifor(let i = 0; i <= length; i++ ) {<Esc>o<Esc>mao}<Esc>`ai
+map dit idescribe(' ', () => {<Esc>o  it('', () => {<Esc>o <Esc>mao  });<Esc>o});<Esc>`a
 call plug#begin()
 Plug 'pangloss/vim-javascript'
 Plug 'sickill/vim-monokai'
