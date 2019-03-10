@@ -111,6 +111,7 @@ alias awkdir="/Users/bsrushti/projects/awk/"
 alias vimdir="/Users/bsrushti/projects/vim_eg/"
 alias v=vim;
 alias csh=create_shell_script.sh    #creats shell script with executive permission
+alias idea=idea.sh
 alias func=function_names.awk       #extract function names from file
 alias gc=extract_comments.sh        #extract comments from filr
 alias pc=pre_commit.sh              #create pre-commit file in .git/hooks/ 
@@ -119,3 +120,8 @@ alias n=node
 alias md=" . making_directory.sh"   #makes directory and change directory to newly created directory
 alias sz="source ~/.zshrc"
 alias gi=initialize_git.sh          #initializes git, creates .gitignore, creates pre-commit 
+HOMEBREW_NO_AUTO_UPDATE=1
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
