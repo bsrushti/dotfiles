@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+export PATH=${PATH}:/usr/local/mysql/bin/
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/bsrushti/.oh-my-zsh"
 
@@ -8,7 +8,8 @@ export ZSH="/Users/bsrushti/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="dracula"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Set list of themes to pick from when loading at random
@@ -67,7 +68,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
   git
   zsh-autosuggestions
-  zsh-syntax-highlighting
+#  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -122,6 +123,9 @@ alias sz="source ~/.zshrc"
 alias gi=initialize_git.sh          #initializes git, creates .gitignore, creates pre-commit 
 HOMEBREW_NO_AUTO_UPDATE=1
 
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
