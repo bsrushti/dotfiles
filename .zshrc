@@ -1,6 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=${PATH}:/usr/local/mysql/bin/
+export PATH="$PATH:/path/to/elixir/bin"
+export GOPATH=$HOME/go
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/bsrushti/.oh-my-zsh"
 
@@ -121,6 +123,7 @@ alias n=node
 alias md=" . making_directory.sh"   #makes directory and change directory to newly created directory
 alias sz="source ~/.zshrc"
 alias gi=initialize_git.sh          #initializes git, creates .gitignore, creates pre-commit 
+alias driver="ls /dev/cu.*"
 HOMEBREW_NO_AUTO_UPDATE=1
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home
@@ -129,3 +132,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$HOME/go/bin
