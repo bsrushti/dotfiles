@@ -122,7 +122,8 @@ alias m=mocha
 alias n=node
 alias md=" . making_directory.sh"   #makes directory and change directory to newly created directory
 alias sz="source ~/.zshrc"
-alias gi=initialize_git.sh          #initializes git, creates .gitignore, creates pre-commit 
+alias gcl="git clone"
+#alias gi=initialize_git.sh          #initializes git, creates .gitignore, creates pre-commit 
 alias driver="ls /dev/cu.*"
 HOMEBREW_NO_AUTO_UPDATE=1
 
