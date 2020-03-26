@@ -1,8 +1,14 @@
 # If you come from bash you might have to change your $PATH.
+HOMEBREW_NO_AUTO_UPDATE=1
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=${PATH}:/usr/local/mysql/bin/
 export PATH="$PATH:/path/to/elixir/bin"
 export GOPATH=$HOME/go
+
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home"
+export SPARK_HOME=~/spark-2.3.0-bin-hadoop2.7
+export PATH=$SPARK_HOME/bin:$PATH
+export PYSPARK_PYTHON=python3
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/bsrushti/.oh-my-zsh"
 
@@ -94,7 +100,6 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -125,14 +130,13 @@ alias sz="source ~/.zshrc"
 alias gcl="git clone"
 #alias gi=initialize_git.sh          #initializes git, creates .gitignore, creates pre-commit 
 alias driver="ls /dev/cu.*"
+alias python3="/usr/local/bin/python3.8"
 HOMEBREW_NO_AUTO_UPDATE=1
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
 
 . $HOME/.asdf/asdf.sh
 
@@ -143,3 +147,4 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$HOME/go/bin
+source /Users/bsrushti/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
