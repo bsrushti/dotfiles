@@ -6,8 +6,10 @@ export PATH="$PATH:/path/to/elixir/bin"
 export GOPATH=$HOME/go
 
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home"
-export SPARK_HOME=~/spark-2.3.0-bin-hadoop2.7
+export SPARK_HOME=~/Downloads/spark-2.4.5-bin-hadoop2.7
 export PATH=$SPARK_HOME/bin:$PATH
+export PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
+export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.8.2.1-src.zip:$PYTHONPATH
 export PYSPARK_PYTHON=python3
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/bsrushti/.oh-my-zsh"
@@ -128,9 +130,12 @@ alias n=node
 alias md=" . making_directory.sh"   #makes directory and change directory to newly created directory
 alias sz="source ~/.zshrc"
 alias gcl="git clone"
+alias mt="make test"
+#alias run-test="pytest -vv"
 #alias gi=initialize_git.sh          #initializes git, creates .gitignore, creates pre-commit 
 alias driver="ls /dev/cu.*"
-alias python3="/usr/local/bin/python3.8"
+alias python3="/usr/local/bin/python3.7"
+alias activate="source ./bin/activate"
 HOMEBREW_NO_AUTO_UPDATE=1
 
 export NVM_DIR="$HOME/.nvm"
