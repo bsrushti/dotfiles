@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_NO_AUTO_UPDATE=1
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=${PATH}:/usr/local/mysql/bin/
 export PATH="$PATH:/path/to/elixir/bin"
@@ -134,8 +134,11 @@ alias mt="make test"
 #alias run-test="pytest -vv"
 #alias gi=initialize_git.sh          #initializes git, creates .gitignore, creates pre-commit 
 alias driver="ls /dev/cu.*"
-alias python3="/usr/local/bin/python3.7"
+#alias python3="/usr/local/bin/python3.7"
 alias activate="source ./bin/activate"
+alias py-venv="python3 -m venv ."
+alias mb="make build"
+alias mt="make test"
 HOMEBREW_NO_AUTO_UPDATE=1
 
 export NVM_DIR="$HOME/.nvm"
@@ -153,3 +156,4 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$HOME/go/bin
 source /Users/bsrushti/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export NODE_ENV=dev
