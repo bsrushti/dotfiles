@@ -5,7 +5,7 @@ export PATH=${PATH}:/usr/local/mysql/bin/
 export PATH="$PATH:/path/to/elixir/bin"
 export GOPATH=$HOME/go
 
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_241.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-13.0.2.jdk/Contents/Home"
 export SPARK_HOME=~/Downloads/spark-2.4.5-bin-hadoop2.7
 export PATH=$SPARK_HOME/bin:$PATH
 export PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
@@ -139,6 +139,32 @@ alias activate="source ./bin/activate"
 alias py-venv="python3 -m venv ."
 alias mb="make build"
 alias mt="make test"
+alias executable="chmod +x"
+#aws-otto
+alias login-nonlive-dev="saml2aws login -a non-live-dev"
+alias exec-nonlive-dev="saml2aws -a non-live-dev exec --"
+
+alias login-nonlive-admin="saml2aws login -a non-live-admin"
+alias exec-nonlive-admin="saml2aws -a non-live-admin exec --"
+
+alias exec-live-dev="saml2aws -a live-dev exec --"
+alias login-live-dev="saml2aws login -a live-dev"
+
+alias exec-live-admin="saml2aws -a live-admin exec --"
+alias login-live-admin="saml2aws login -a live-admin"
+
+alias login-dr-dev-admin="saml2aws login -a dr-dev-admin"
+alias exec-dr-dev-admin="saml2aws -a dr-dev-admin exec --"
+
+
+#kubernetes
+#alias switch-live="kubectl config use-context arn:aws:eks:eu-west-1:895325053401:cluster/live-eks-cluster"
+alias switch-live="saml2aws -a no-vpn exec -- kubectl config use-context arn:aws:eks:eu-west-1:895325053401:cluster/live-eks-cluster"
+#alias switch-dev="kubectl config use-context arn:aws:eks:eu-west-1:114240581141:cluster/develop-eks-cluster"
+alias switch-dev="saml2aws -a no-vpn exec -- kubectl config use-context arn:aws:eks:eu-west-1:114240581141:cluster/develop-eks-cluster"
+
+alias switch-dr-dev="saml2aws -a no-vpn exec -- kubectl config use-context arn:aws:eks:eu-west-1:658753139666:cluster/dr-develop-eks-cluster"
+alias namespaces="kubectl get pods --all-namespaces"
 HOMEBREW_NO_AUTO_UPDATE=1
 
 export NVM_DIR="$HOME/.nvm"
@@ -157,3 +183,4 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$HOME/go/bin
 source /Users/bsrushti/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export NODE_ENV=dev
+export GPG_TTY=$(tty)
