@@ -6,14 +6,17 @@ export PATH="$PATH:/path/to/elixir/bin"
 export GOPATH=$HOME/go
 
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-13.0.2.jdk/Contents/Home"
-export SPARK_HOME=~/Downloads/spark-2.4.5-bin-hadoop2.7
+export SPARK_HOME=~/Downloads/spark-3.1.1-bin-hadoop2.7
 export PATH=$SPARK_HOME/bin:$PATH
 export PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
 export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.8.2.1-src.zip:$PYTHONPATH
 export PYSPARK_PYTHON=python3
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/bsrushti/.oh-my-zsh"
-
+export PATH="$HOME/.jenv/bin:$PATH"
+  eval "$(jenv init -)"
+#export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"
+#alias jenv_set_java_home='export JAVA_HOME="$HOME/.jenv/versions/`jenv version-name`"'
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -111,6 +114,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE='20'
+
 alias js="/Users/bsrushti/javascript"
 alias longestline="sh /Users/bsrushti/shFiles/longest_line.sh"
 alias runtest="/Users/bsrushti/shFiles/run_test.sh"
@@ -120,11 +125,11 @@ alias bashdir="/Users/bsrushti/projects/bash_assignment/"
 alias awkdir="/Users/bsrushti/projects/awk/"
 alias vimdir="/Users/bsrushti/projects/vim_eg/"
 alias v=vim;
-alias csh=create_shell_script.sh    #creats shell script with executive permission
-alias idea=idea.sh
-alias func=function_names.awk       #extract function names from file
-alias gc=extract_comments.sh        #extract comments from filr
-alias pc=pre_commit.sh              #create pre-commit file in .git/hooks/ 
+alias csh="/Users/bsrushti/bin_files/create_shell_script.sh"    #creats shell script with executive permission
+alias idea="/Users/bsrushti/bin_files/idea.sh"
+alias func="/Users/bsrushti/bin_files/function_names.awk"       #extract function names from file
+alias gc="/Users/bsrushti/bin_files/extract_comments.sh"        #extract comments from filr
+alias pc="/Users/bsrushti/bin_files/pre_commit.sh"              #create pre-commit file in .git/hooks/ 
 alias m=mocha
 alias n=node
 alias md=" . making_directory.sh"   #makes directory and change directory to newly created directory
@@ -140,7 +145,12 @@ alias py-venv="python3 -m venv ."
 alias mb="make build"
 alias mt="make test"
 alias executable="chmod +x"
+alias lsf="find . -maxdepth 1 -type f"
+alias speed-test="python /Users/bsrushti/Library/Python/3.9/lib/python/site-packages/speedtest.py | grep -E 'Upload|Download'"
 #aws-otto
+alias smll="saml2aws login"
+alias smlx="saml2aws -a no-vpn exec --"
+alias login-backup="saml2aws login -a backup-admin"
 alias login-nonlive-dev="saml2aws login -a non-live-dev"
 alias exec-nonlive-dev="saml2aws -a non-live-dev exec --"
 
